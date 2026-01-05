@@ -372,24 +372,30 @@
   <script>
     (() => {
       'use strict';
-      const forms = document.querySelectorAll('.needs-validation');
-      forms.forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
 
-      const popup = new bootstrap.Modal(document.getElementById('callbackModal'));
-      let popupShown = false;
-      document.addEventListener('mouseleave', (event) => {
-        if (event.clientY <= 0 && !popupShown) {
-          popup.show();
-          popupShown = true;
-        }
+      document.addEventListener('DOMContentLoaded', () => {
+        const forms = document.querySelectorAll('.needs-validation');
+        forms.forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+
+        const callbackModalEl = document.getElementById('callbackModal');
+        if (!callbackModalEl) return;
+
+        const popup = new bootstrap.Modal(callbackModalEl);
+        let popupShown = false;
+        document.addEventListener('mouseleave', (event) => {
+          if (event.clientY <= 0 && !popupShown) {
+            popup.show();
+            popupShown = true;
+          }
+        });
       });
     })();
   </script>
