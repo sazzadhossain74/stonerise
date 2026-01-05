@@ -113,7 +113,7 @@
       <div class="collapse navbar-collapse" id="navContent">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="btn btn-peach" href="https://forms.zohopublic.com.au/stoneriseaugm1/form/LevelupyourfutureApplynown/formperma/oDNVSEf2s9xAzXtb0MToqTzxM4h966uaJmgZ59t2NMMU" target="_blank" rel="noopener">Apply Now</a></li>
+          <li class="nav-item"><button class="btn btn-peach" type="button" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button></li>
         </ul>
       </div>
     </div>
@@ -127,7 +127,7 @@
           <h1 class="display-4 fw-bold mb-4">Invest in Your Future<br>with <span style="text-decoration: underline 6px solid var(--peach); text-underline-offset: 6px;">Confidence</span></h1>
           <p class="lead mb-4">At Stone Rise Property Advisory, we help you find the property that fits your goals, without the stress. As a boutique buyers' agency, we’re dedicated to making every step—from search to settlement—simple and seamless. Ready to invest with confidence?</p>
           <div class="d-flex flex-wrap gap-3">
-            <a class="btn btn-peach" href="https://forms.zohopublic.com.au/stoneriseaugm1/form/LevelupyourfutureApplynown/formperma/oDNVSEf2s9xAzXtb0MToqTzxM4h966uaJmgZ59t2NMMU" target="_blank" rel="noopener">Apply Now</a>
+            <button class="btn btn-peach" type="button" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
             <a class="btn btn-outline-light rounded-pill px-4" href="#contact">Get in Touch</a>
           </div>
         </div>
@@ -174,7 +174,7 @@
               <p class="mb-4">As buyers’ advocates, Nauman and the Stone Rise team specialise in finding and securing properties that outperform the national average. Whether you are just getting started or scaling your portfolio, we offer a tailored, one-on-one boutique service from start to the end.</p>
               <p class="fw-semibold mb-4">If you would like to learn more about how we can help you reach your property goals, book a call with Nauman.</p>
               <p class="text-danger fw-semibold">Remember: thinking won’t change your future. Decisions will. <span style="text-decoration: underline; text-decoration-thickness: 4px; text-decoration-color: var(--peach);">(future proof style)</span></p>
-              <a class="btn btn-peach" href="https://forms.zohopublic.com.au/stoneriseaugm1/form/LevelupyourfutureApplynown/formperma/oDNVSEf2s9xAzXtb0MToqTzxM4h966uaJmgZ59t2NMMU" target="_blank" rel="noopener">Apply Now</a>
+              <button class="btn btn-peach" type="button" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
             </div>
           </div>
           <div class="col-lg-6">
@@ -228,7 +228,7 @@
           <div class="col-lg-7 text-white">
             <h2 class="fw-bold mb-3">Ready to Secure Your Future?</h2>
             <p class="lead">Whether you’re ready to start the journey or just have a few questions, we’re here to help. Take the first step towards a secure, future-proof investment by connecting with our team today.</p>
-            <a class="btn btn-light text-peach fw-semibold" style="color: var(--peach);" href="https://forms.zohopublic.com.au/stoneriseaugm1/form/LevelupyourfutureApplynown/formperma/oDNVSEf2s9xAzXtb0MToqTzxM4h966uaJmgZ59t2NMMU" target="_blank" rel="noopener">Apply Now</a>
+            <button class="btn btn-light text-peach fw-semibold" style="color: var(--peach);" type="button" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
           </div>
           <div class="col-lg-5 text-center">
             <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Team member" class="coral-photo">
@@ -393,6 +393,103 @@
       });
     })();
   </script>
+
+  <!-- Apply Now Modal -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header border-0 justify-content-center">
+          <div class="text-center w-100">
+            <img src="https://dummyimage.com/180x60/ea906c/ffffff&text=Stone+Rise" alt="Stone Rise logo" class="img-fluid mb-2" style="max-height:60px;">
+            <h3 class="fw-bold mb-1" id="applyModalLabel">Apply Now</h3>
+            <p class="text-muted mb-0">Take the first step toward a clearer property strategy. Apply to be considered for a StoneRise Fast Track session with Nauman.</p>
+          </div>
+          <button type="button" class="btn-close position-absolute end-0 me-3 mt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <form class="needs-validation" novalidate action="mailto:webcontact@stonerise.com.au" method="post">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-control" name="first_name" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-control" name="last_name" required>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone *</label>
+                <div class="input-group">
+                  <span class="input-group-text border-end-0">+61</span>
+                  <input type="tel" class="form-control border-start-0" name="phone" required>
+                </div>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" name="email" required>
+                <div class="invalid-feedback">Enter a valid email.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Do you have pre-approval? *</label>
+                <select class="form-select" name="preapproval" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>In progress</option>
+                </select>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Do you own any investment properties? *</label>
+                <select class="form-select" name="own_properties" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">When are you ready to buy? *</label>
+                <select class="form-select" name="ready_to_buy" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option>Immediately</option>
+                  <option>0-3 months</option>
+                  <option>3-6 months</option>
+                  <option>6-12 months</option>
+                  <option>12+ months</option>
+                </select>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Where did you hear about us? *</label>
+                <select class="form-select" name="heard_about" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option>Referral</option>
+                  <option>Social media</option>
+                  <option>Search</option>
+                  <option>Event / webinar</option>
+                  <option>Other</option>
+                </select>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Tell us where you are at and what you are looking to achieve. *</label>
+                <p class="small text-muted mb-1">The more detail you share about your current portfolio and goals, the quicker we can get you into a strategy session with Nauman.</p>
+                <textarea class="form-control" name="goals" rows="4" required></textarea>
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-12 d-flex justify-content-center pt-2">
+                <button class="btn" type="submit" style="background:#9c0000; color:#fff; border-radius:8px; padding:0.65rem 1.75rem;">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="modal fade" id="callbackModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
